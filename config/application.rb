@@ -5,6 +5,7 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+ENV["RAILS_ASSET_ID"] = "" # disable timestamps at end of asset files for offline browsing
 
 module Shop
   class Application < Rails::Application
